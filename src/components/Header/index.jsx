@@ -1,13 +1,20 @@
+import logoKasa from "../../assets/LogoKasa.svg";
+import { Link, NavLink } from "react-router-dom";
+import "./style.css";
+
 function Header() {
     return (
         <>
-            <ul>
-                <li to="/">Accueil</li>
-                <li to="/freelances">Profils</li>
-                <li to="/survey/1" $isFullLink>
-                    Faire le test
-                </li>
-            </ul>
+            <header>
+                <a>
+                    {" "}
+                    <img src={logoKasa} alt="" />
+                </a>
+                <nav>
+                    <a>Accueil</a>
+                    <a>A propos</a>
+                </nav>
+            </header>
         </>
     );
 }

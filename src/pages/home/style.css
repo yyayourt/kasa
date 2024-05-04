@@ -1,0 +1,12 @@
+.banner {
+    width: 40%;
+}
+
+.title img {
+    width: 50%;
+}
+
+h1 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
