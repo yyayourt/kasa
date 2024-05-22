@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Importation de Link
-import accommodations from "../../datas/logements.json"; // Ajustez le chemin d'accès selon votre structure de dossier
-import "../../assets/SCSS/components/gallery.scss"; // Assurez-vous d'importer votre fichier CSS
+import { Link } from "react-router-dom";
+import accommodations from "../../datas/logements.json";
+import "../../assets/SCSS/components/gallery.scss";
 
 const AccommodationsList = () => {
     return (

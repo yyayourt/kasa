@@ -1,7 +1,7 @@
 // src/components/Header/Header.jsx
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../assets/SCSS/components/header.scss"; // Assurez-vous d'avoir un fichier SCSS pour les styles
+import "../../assets/SCSS/components/header.scss";
 import logoKasa from "../../assets/LogoKasa.svg";
 
 const Header = () => {

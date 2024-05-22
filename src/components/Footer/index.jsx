@@ -1,5 +1,5 @@
 import React from "react";
-import "../../assets/SCSS/components/footer.scss"; // Assurez-vous d'avoir un fichier SCSS pour les styles
+import "../../assets/SCSS/components/footer.scss";
 import LogoKasaBlanc from "../../assets/LogoKasaBlanc.svg";
 
 const Footer = () => {

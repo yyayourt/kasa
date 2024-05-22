@@ -1,7 +1,7 @@
 import React from "react";
-import "../../assets/SCSS/pages/home.scss"; // Votre fichier SCSS pour la page Home
+import "../../assets/SCSS/pages/home.scss";
 import imgHome from "../../assets/imgHome.jpeg";
-import Gallery from "../../components/Gallery"; // Ajustez le chemin selon votre structure de dossier
+import Gallery from "../../components/Gallery";
 
 const Home = () => {
     return (
