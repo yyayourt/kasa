@@ -8,7 +8,11 @@ const Home = () => {
         <div className="home">
             <div className="banner">
                 <img src={imgHome} alt="Bannière" />
-                <h1>Chez vous, partout et ailleurs</h1>
+                <h1 className="desktop-title">Chez vous, partout et ailleurs</h1>
+                <h1 className="mobile-title">
+                    Chez vous,
+                    <br /> partout et ailleurs
+                </h1>
             </div>
             <Gallery />
         </div>

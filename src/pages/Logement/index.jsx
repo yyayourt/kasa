@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import data from "../../datas/logements.json";
 import "../../assets/SCSS/pages/logement.scss";
 import arrow from "../../assets/chevron-up-solid.svg";
@@ -14,13 +14,18 @@ const HousingDetail = () => {
     const [descriptionOpen, setDescriptionOpen] = useState(false);
     const [equipmentsOpen, setEquipmentsOpen] = useState(false);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const logementTrouvé = data.find((h) => h.id === id);
         setLogement(logementTrouvé);
+        setLoading(false);
+
+        return;
     }, [id]);
 
-    if (!logement) return <div>Chargement...</div>;
+    if (loading) return;
+    if (!logement) return <Navigate to="/notfound" />;
 
     const toggleDescription = () => {
         setDescriptionOpen(!descriptionOpen);
@@ -50,7 +55,13 @@ const HousingDetail = () => {
         <div className="detail-logement">
             <div className="galerie-images">
                 {logement.pictures.map((pic, index) => (
-                    <img key={index} src={pic} alt={`Vue ${index + 1}`} className={`image ${currentImageIndex === index ? "active" : ""}`} style={{ zIndex: currentImageIndex === index ? 1 : 0 }} />
+                    <img
+                        key={index}
+                        src={pic}
+                        alt={`visuel d'appartement ${index + 1}`}
+                        className={`image ${currentImageIndex === index ? "active" : ""}`}
+                        style={{ zIndex: currentImageIndex === index ? 1 : 0 }}
+                    />
                 ))}
                 <button className="left-arrow" onClick={previousImage}>
                     <img src={leftArrow} alt="Previous" />
