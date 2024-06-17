@@ -1,0 +1,30 @@
+.not-found-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 72vw;
+    text-align: center;
+    background: white;
+    gap: 10vw;
+  
+    h1 {
+      font-size: 26vw;
+      color: #ff616f;
+    }
+  
+    h2 {
+      font-size: 3.4vw;
+      margin-bottom: 20px;
+      color: #ff616f;
+    }
+  
+    .home-link {
+      font-size: 3.2vw;
+      color: black;
+      border-radius: 5px;
+      font-weight: 500;
+
+    }
+}
+
+  

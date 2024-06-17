@@ -1,0 +1,77 @@
+// src/pages/Home/Home.scss
+.home {
+    .banner {
+        position: relative;
+        text-align: center;
+
+        img {
+            width: 86%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+
+        .mobile-title {
+            display: none ;
+        }
+    
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px;
+            width: 86%;
+            height: 250px;
+            position: absolute;
+            top: 49%;
+            border-radius: 30px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 3.5em;
+            background: rgba(0, 0, 0, 0.6);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    }
+   
+    .logement-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+
+        .logement-card {
+            background-color: red; 
+            height: 300px; 
+        }
+    }
+    @media (max-width: 768px) {
+        .banner img {
+            width: 90%;
+            height: 180px;
+        }
+
+        .mobile-title {
+            display: flex !important;
+        }
+
+        .desktop-title {
+            display: none !important;
+        }
+
+        .banner
+         h1 {
+            width: 90%;
+            height: 180px;
+            font-size:2.5em;
+            text-align: start !important;
+            justify-content: flex-start !important;
+            padding: 15px ;
+        }
+    }
+    @media (max-width: 465px) {
+        h1 {
+            font-size: 1.8em !important;
+        }
+    }   
+}
