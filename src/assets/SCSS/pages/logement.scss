@@ -54,6 +54,18 @@
         .right-arrow {
             right: 10px;
         }
+
+        .image-counter {
+            position: absolute;
+            bottom: 20px;
+            right: 50%;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 1rem;
+            z-index: 2;
+        }
     }
 
     .entête {
@@ -194,6 +206,7 @@
             }
         }
     }
+
     @media (max-width: 768px) {
         .entête{
             flex-direction: column;
@@ -208,13 +221,22 @@
             justify-content: space-between;
         }
         
+        .galerie-images {
+            height: 350px;
+        }
+
         .left-arrow img,
         .right-arrow img {
-            width: 80px  !important;
-            height: 80px  !important;
+            width: 40px  !important;
+            height: 40px  !important;
         }
-      }
-      @media (max-width: 420px) {
+        
+        .image-counter {
+            display: none;
+        }
+    }
+
+    @media (max-width: 420px) {
         .star{
             width: 20px !important;
             height: 20px !important;

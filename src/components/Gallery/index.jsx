@@ -8,7 +8,7 @@ const AccommodationsList = () => {
         <div className="accommodations-container">
             {accommodations.map((item) => (
                 <Link key={item.id} to={`/logement/${item.id}`} className="accommodation-card">
-                    <img src={item.pictures[0]} alt={item.title} />
+                    <img src={item.cover} alt={item.title} />
                     <h3>{item.title}</h3>
                 </Link>
             ))}

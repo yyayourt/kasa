@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+// src/pages/About.js
+import React from "react";
 import "../../assets/SCSS/pages/about.scss";
-import arrow from "../../assets/chevron-up-solid.svg";
 import banner from "../../assets/aboutBanner.jpeg";
+import Dropdown from "../../components/Dropdown";
 
 const About = () => {
-    const [openSections, setOpenSections] = useState({});
-
     const sections = [
         {
             title: "Fiabilité",
@@ -27,13 +26,6 @@ const About = () => {
         },
     ];
 
-    const toggleSection = (index) => {
-        setOpenSections((prevState) => ({
-            ...prevState,
-            [index]: !prevState[index],
-        }));
-    };
-
     return (
         <div className="about-page">
             <div className="banner">
@@ -41,15 +33,7 @@ const About = () => {
             </div>
             <div className="sections">
                 {sections.map((section, index) => (
-                    <div key={index} className="section">
-                        <h2 onClick={() => toggleSection(index)} className="dropdown-header">
-                            {section.title}
-                            <img src={arrow} alt="" className={`arrow ${openSections[index] ? "rotate" : ""}`} />
-                        </h2>
-                        <div className={`content ${openSections[index] ? "open" : ""}`}>
-                            <p>{section.content}</p>
-                        </div>
-                    </div>
+                    <Dropdown key={index} title={section.title} content={section.content} className="section" />
                 ))}
             </div>
         </div>
